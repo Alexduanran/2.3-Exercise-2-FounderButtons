@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,78 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FounderButtons" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BC-I3-zKD">
+                                <rect key="frame" x="50" y="20" width="275" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6FH-pc-Ayi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" red="0.49803921569999998" green="0.066666666669999999" blue="0.047058823530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFQ-x3-P2b">
+                                <rect key="frame" x="87.5" y="111" width="200" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Who Founded Google?"/>
+                                <connections>
+                                    <action selector="showMessagesPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bE2-O8-Z9n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o51-f8-H50">
+                                <rect key="frame" x="45.5" y="162" width="284" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Who Founded Rent the Runway?"/>
+                                <connections>
+                                    <action selector="showOtherMessagesPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iTx-cq-Smj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMZ-Xo-H8H">
+                                <rect key="frame" x="164" y="271" width="47" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6En-ws-uQI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCM-gJ-uyO">
+                                <rect key="frame" x="50" y="55" width="275" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.85490196078431369" green="0.792156862745098" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1BC-I3-zKD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="14f-qm-hdt"/>
+                            <constraint firstItem="OFQ-x3-P2b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="91" id="7zq-r3-wIs"/>
+                            <constraint firstItem="wMZ-Xo-H8H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Iut-4d-KZG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LCM-gJ-uyO" secondAttribute="trailing" constant="50" id="JfF-Jr-wPT"/>
+                            <constraint firstItem="LCM-gJ-uyO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MPD-kt-W0T"/>
+                            <constraint firstItem="wMZ-Xo-H8H" firstAttribute="top" secondItem="o51-f8-H50" secondAttribute="bottom" constant="73" id="Rmn-Vc-FFU"/>
+                            <constraint firstAttribute="trailing" secondItem="1BC-I3-zKD" secondAttribute="trailing" constant="50" id="T7x-u7-Oyz"/>
+                            <constraint firstItem="LCM-gJ-uyO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="bf5-v5-MtJ"/>
+                            <constraint firstItem="o51-f8-H50" firstAttribute="top" secondItem="OFQ-x3-P2b" secondAttribute="bottom" constant="15" id="cth-cc-vQN"/>
+                            <constraint firstItem="1BC-I3-zKD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="gEM-vq-et2"/>
+                            <constraint firstItem="LCM-gJ-uyO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="hlJ-4K-oX3"/>
+                            <constraint firstItem="1BC-I3-zKD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="iaX-BU-ihQ"/>
+                            <constraint firstItem="o51-f8-H50" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oqc-Nc-gIe"/>
+                            <constraint firstItem="OFQ-x3-P2b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pIE-yM-mAn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="1BC-I3-zKD" id="TWZ-WM-puQ"/>
+                        <outlet property="messageLabel2" destination="LCM-gJ-uyO" id="Hxk-sM-8K2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-84" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
